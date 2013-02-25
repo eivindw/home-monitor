@@ -24,6 +24,10 @@
          <artifactId>dropwizard-core</artifactId>
       </dependency>
       <dependency>
+         <groupId>com.yammer.dropwizard</groupId>
+         <artifactId>dropwizard-client</artifactId>
+      </dependency>
+      <dependency>
          <groupId>junit</groupId>
          <artifactId>junit</artifactId>
       </dependency>
@@ -33,6 +37,12 @@
          <dependency>
             <groupId>com.yammer.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
+            <version>${dropwizard.version}</version>
+            <scope>compile</scope>
+         </dependency>
+         <dependency>
+            <groupId>com.yammer.dropwizard</groupId>
+            <artifactId>dropwizard-client</artifactId>
             <version>${dropwizard.version}</version>
             <scope>compile</scope>
          </dependency>
