@@ -1,4 +1,5 @@
 target/
 *.iml
 .idea
-efergy-api.txt
+tmp/
+
