@@ -46,7 +46,7 @@ public class EfergyService {
          return new ObjectMapper().readValue(response.getEntity().getContent(), Map.class);
       } catch (Exception e) {
          logger.error("Problem connecting to Efergy", e);
-         return null;
+         throw new RuntimeException("Problem connecting to Efergy", e);
       }
    }
 }

@@ -5,5 +5,5 @@ http:
 
 clients:
    efergy:
-      user: secret
-      password: secret
+      user: <not set>
+      password: <not set>

@@ -25,13 +25,12 @@ public class MonitorService extends Service<MonitorConfiguration> {
 
    @Override
    public void run(MonitorConfiguration config, Environment environment) throws Exception {
-      environment.addHealthCheck(new EfergyHealthCheck("Efergy"));
-
-      environment.addResource(new ApiResource());
-
       final HttpClient httpClient = new HttpClientBuilder().using(config.getHttpClient()).build();
       final MonitorConfiguration.UserPass efergy = config.getClients().getEfergy();
+      final EfergyService efergyService = new EfergyService(httpClient, efergy.getUser(), efergy.getPassword());
 
-      new EfergyService(httpClient, efergy.getUser(), efergy.getPassword());
+      environment.addHealthCheck(new EfergyHealthCheck("Efergy", efergyService));
+
+      environment.addResource(new ApiResource());
    }
 }

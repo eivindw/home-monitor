@@ -1,15 +1,24 @@
 package eivindw.health;
 
 import com.yammer.metrics.core.HealthCheck;
+import eivindw.services.EfergyService;
 
 public class EfergyHealthCheck extends HealthCheck {
 
-   public EfergyHealthCheck(String name) {
+   private final EfergyService service;
+
+   public EfergyHealthCheck(String name, EfergyService service) {
       super(name);
+      this.service = service;
    }
 
    @Override
    protected Result check() throws Exception {
-      return Result.healthy();
+      try {
+         service.getInstant();
+         return Result.healthy();
+      } catch (Exception e) {
+         return Result.unhealthy(e);
+      }
    }
 }
