@@ -19,8 +19,6 @@ public class EfergyServiceTest {
       final String user = System.getenv("user");
       final String password = System.getenv("password");
 
-      System.out.println("Calling with user: " + user + " password: " + password);
-
       EfergyService service = new EfergyService(httpClient, user, password);
 
       Map instant = service.getInstant();

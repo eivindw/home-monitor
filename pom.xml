@@ -130,6 +130,24 @@
                </execution>
             </executions>
          </plugin>
+         <!--plugin>
+            <groupId>org.jvnet.jax-ws-commons</groupId>
+            <artifactId>jaxws-maven-plugin</artifactId>
+            <version>2.2</version>
+            <executions>
+               <execution>
+                  <phase>generate-sources</phase>
+                  <goals>
+                     <goal>wsimport</goal>
+                  </goals>
+                  <configuration>
+                     <wsdlUrls>
+                        <wsdlUrl>http://eklima.met.no/metdata/MetDataService?WSDL</wsdlUrl>
+                     </wsdlUrls>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin-->
       </plugins>
    </build>
 </project>
