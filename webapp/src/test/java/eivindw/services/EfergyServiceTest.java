@@ -3,13 +3,14 @@ package eivindw.services;
 import com.yammer.dropwizard.client.HttpClientBuilder;
 import com.yammer.dropwizard.client.HttpClientConfiguration;
 import org.apache.http.client.HttpClient;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Map;
 
 public class EfergyServiceTest {
 
-   @Test
+   @Test @Ignore("Not working without user + password")
    public void connectClientWithSession() throws Exception {
       final HttpClientConfiguration configuration = new HttpClientConfiguration();
       configuration.setCookiesEnabled(true);

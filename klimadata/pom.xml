@@ -17,12 +17,8 @@
          <artifactId>axis</artifactId>
       </dependency>
       <dependency>
-         <groupId>javax.xml</groupId>
-         <artifactId>jaxrpc-api</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>commons-logging</groupId>
-         <artifactId>commons-logging</artifactId>
+         <groupId>org.apache.axis</groupId>
+         <artifactId>axis-jaxrpc</artifactId>
       </dependency>
       <dependency>
          <groupId>commons-discovery</groupId>
@@ -32,13 +28,18 @@
          <groupId>wsdl4j</groupId>
          <artifactId>wsdl4j</artifactId>
       </dependency>
+      <dependency>
+         <groupId>commons-logging</groupId>
+         <artifactId>commons-logging</artifactId>
+         <scope>provided</scope>
+      </dependency>
    </dependencies>
    <build>
       <plugins>
          <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>axistools-maven-plugin</artifactId>
-            <version>1.4</version>
+            <version>${axis.version}</version>
             <configuration>
                <urls>
                   <url>http://eklima.met.no/metdata/MetDataService?WSDL</url>
