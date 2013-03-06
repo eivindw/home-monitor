@@ -38,22 +38,22 @@
    </dependencies>
    <dependencyManagement>
       <dependencies>
+         <!-- Project -->
          <dependency>
             <groupId>eivindw</groupId>
             <artifactId>klimadata-client</artifactId>
             <version>${project.version}</version>
          </dependency>
+         <!-- Prod external -->
          <dependency>
             <groupId>com.yammer.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
             <version>${dropwizard.version}</version>
-            <scope>compile</scope>
          </dependency>
          <dependency>
             <groupId>com.yammer.dropwizard</groupId>
             <artifactId>dropwizard-client</artifactId>
             <version>${dropwizard.version}</version>
-            <scope>compile</scope>
          </dependency>
          <dependency>
             <groupId>org.apache.axis</groupId>
@@ -80,30 +80,29 @@
             <artifactId>wsdl4j</artifactId>
             <version>${wsdl4j.version}</version>
          </dependency>
-         <dependency>
+         <!--dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor_2.10</artifactId>
             <version>${akka.version}</version>
-            <scope>compile</scope>
          </dependency>
          <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
             <version>${elasticsearch.version}</version>
-            <scope>compile</scope>
-         </dependency>
-         <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-testkit_2.10</artifactId>
-            <version>${akka.version}</version>
-            <scope>test</scope>
-         </dependency>
+         </dependency-->
+         <!-- Test -->
          <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
          </dependency>
+         <!--dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-testkit_2.10</artifactId>
+            <version>${akka.version}</version>
+            <scope>test</scope>
+         </dependency-->
       </dependencies>
    </dependencyManagement>
    <build>
