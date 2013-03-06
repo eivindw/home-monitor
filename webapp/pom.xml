@@ -21,6 +21,10 @@
          <groupId>com.yammer.dropwizard</groupId>
          <artifactId>dropwizard-client</artifactId>
       </dependency>
+      <dependency>
+         <groupId>eivindw</groupId>
+         <artifactId>klimadata-client</artifactId>
+      </dependency>
    </dependencies>
    <build>
       <plugins>
