@@ -15,8 +15,7 @@ public class ApiResource {
    @GET
    public Map listServices() {
       return ImmutableMap.of(
-         "service", "/path/to/service",
-         "service2", "/path/to/service2"
+         "weather", "/api/weather"
       );
    }
 }

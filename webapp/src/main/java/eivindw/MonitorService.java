@@ -8,6 +8,7 @@ import com.yammer.dropwizard.config.Environment;
 import eivindw.health.EfergyHealthCheck;
 import eivindw.health.WeatherHealthCheck;
 import eivindw.resources.ApiResource;
+import eivindw.resources.WeatherResource;
 import eivindw.services.EfergyService;
 import org.apache.http.client.HttpClient;
 
@@ -34,5 +35,6 @@ public class MonitorService extends Service<MonitorConfiguration> {
       environment.addHealthCheck(new WeatherHealthCheck("Klimadata"));
 
       environment.addResource(new ApiResource());
+      environment.addResource(new WeatherResource());
    }
 }
