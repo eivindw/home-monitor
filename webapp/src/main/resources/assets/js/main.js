@@ -12,9 +12,7 @@ requirejs.config({
       'bootstrap': '../lib/bootstrap/js/bootstrap',
       'moment': '../lib/moment-2.0.0',
       'moment-norwegian': '../lib/moment-nb',
-      'signals': '../lib/signals',
-      'crossroads': '../lib/crossroads.min',
-      'hasher': '../lib/hasher.min'
+      'routie': '../lib/routie.min'
    },
 
    shim: {
@@ -28,29 +26,26 @@ requirejs.config({
       'highcharts-more': {
          deps: ['highcharts'],
          exports: 'HighchartsMore'
-      },
-      'crossroads': ['signals'],
-      'hasher': ['signals']
+      }
    }
 });
 
-define(function (require) {
+define(function(require) {
    var $ = require('jquery');
    require('bootstrap');
-   var crossroads = require('crossroads');
-   var hasher = require('hasher');
+   require('routie');
 
-   $(document).ready(function () {
-      crossroads.addRoute('about', function() {
-         console.log("About!");
+   $(document).ready(function() {
+      routie({
+         '': function() {
+            console.log("Home!");
+         },
+         'about': function() {
+            console.log("About!");
+         },
+         'contact': function() {
+            console.log("Contact!")
+         }
       });
-
-      function parseHash(newHash, oldHash){
-         crossroads.parse(newHash);
-      }
-
-      hasher.initialized.add(parseHash); // parse initial hash
-      hasher.changed.add(parseHash); //parse hash changes
-      hasher.init();
    });
 });
