@@ -15,9 +15,9 @@ public class WeatherHealthCheck extends HealthCheck {
       try {
          MetDataServicePortType service = (MetDataServicePortType) new MetDataServiceLocator().getPort(MetDataServicePortType.class);
 
-         String dateFormat = service.getDateFormat();
+         service.getDateFormat();
 
-         return Result.healthy("Weather data date-format: " + dateFormat);
+         return Result.healthy();
       } catch (Exception e) {
          return Result.unhealthy(e);
       }
