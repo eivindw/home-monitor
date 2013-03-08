@@ -12,7 +12,8 @@ requirejs.config({
       'bootstrap': '../lib/bootstrap/js/bootstrap',
       'moment': '../lib/moment-2.0.0',
       'moment-norwegian': '../lib/moment-nb',
-      'routie': '../lib/routie.min'
+      'routie': '../lib/routie.min',
+      'easel': '../lib/easeljs-0.6.0.min'
    },
 
    shim: {
