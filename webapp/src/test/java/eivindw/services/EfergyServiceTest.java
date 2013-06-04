@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class EfergyServiceTest {
 
-   @Test @Ignore("Not working without user + password")
+   @Test //@Ignore("Not working without user + password")
    public void connectClientWithSession() throws Exception {
       final HttpClientConfiguration configuration = new HttpClientConfiguration();
       configuration.setCookiesEnabled(true);
