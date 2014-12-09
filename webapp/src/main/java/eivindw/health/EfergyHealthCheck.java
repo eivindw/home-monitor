@@ -1,6 +1,6 @@
 package eivindw.health;
 
-import com.yammer.metrics.core.HealthCheck;
+import com.codahale.metrics.health.HealthCheck;
 import eivindw.services.EfergyService;
 
 import java.util.Map;
@@ -9,8 +9,7 @@ public class EfergyHealthCheck extends HealthCheck {
 
    private final EfergyService service;
 
-   public EfergyHealthCheck(String name, EfergyService service) {
-      super(name);
+   public EfergyHealthCheck(EfergyService service) {
       this.service = service;
    }
 

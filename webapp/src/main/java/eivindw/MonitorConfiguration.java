@@ -1,8 +1,8 @@
 package eivindw;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.yammer.dropwizard.client.HttpClientConfiguration;
-import com.yammer.dropwizard.config.Configuration;
+import io.dropwizard.Configuration;
+import io.dropwizard.client.HttpClientConfiguration;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

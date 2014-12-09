@@ -30,12 +30,12 @@ public class EfergyService {
    }
 
    public Map getInstant() {
-      return postToJson("http://engage.efergy.com/mobile_proxy/getInstant", nvParam("token", getLoginToken()));
+      return postToJson("https://engage.efergy.com/mobile_proxy/getInstant", nvParam("token", getLoginToken()));
    }
 
    private String getLoginToken() {
-      Map<String, Object> jsonMap = postToJson(
-         "http://engage.efergy.com/mobile/get_token",
+      final Map<String, Object> jsonMap = postToJson(
+         "https://engage.efergy.com/mobile/get_token",
          nvParam("username", user),
          nvParam("password", password),
          nvParam("device", "IPHONE")
@@ -51,13 +51,13 @@ public class EfergyService {
    @SuppressWarnings("unchecked")
    private Map<String, Object> postToJson(String url, BasicNameValuePair... params) {
       try {
-         HttpPost loginPost = new HttpPost(url);
+         final HttpPost loginPost = new HttpPost(url);
 
          loginPost.setEntity(new UrlEncodedFormEntity(Lists.<NameValuePair>newArrayList(params)));
 
-         HttpResponse loginResponse = httpClient.execute(loginPost);
+         final HttpResponse response = httpClient.execute(loginPost);
 
-         return OBJECT_MAPPER.readValue(loginResponse.getEntity().getContent(), Map.class);
+         return OBJECT_MAPPER.readValue(response.getEntity().getContent(), Map.class);
       } catch (Exception e) {
          logger.error("Problem connecting to Efergy", e);
          throw new RuntimeException("Problem connecting to Efergy", e);

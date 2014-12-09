@@ -1,7 +1,7 @@
 package eivindw.resources;
 
+import com.codahale.metrics.annotation.Timed;
 import com.google.common.collect.ImmutableMap;
-import com.yammer.metrics.annotation.Timed;
 import metdata.met.no.IMetDataService_xsd.No_met_metdata_Metdata;
 import metdata.met.no.IMetDataService_xsd.No_met_metdata_TimeStamp;
 import metdata.met.no.IMetDataService_xsd.No_met_metdata_WeatherElement;

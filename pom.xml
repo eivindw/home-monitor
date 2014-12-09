@@ -10,10 +10,10 @@
    <version>1.0-SNAPSHOT</version>
    <properties>
       <!-- Dependency versions -->
-      <jdk.version>1.7</jdk.version>
+      <jdk.version>1.8</jdk.version>
       <akka.version>2.1.0</akka.version>
       <junit.version>4.11</junit.version>
-      <dropwizard.version>0.6.1</dropwizard.version>
+      <dropwizard.version>0.8.0-rc1</dropwizard.version>
       <elasticsearch.version>0.20.5</elasticsearch.version>
       <axis.version>1.4</axis.version>
       <wsdl4j.version>1.6.2</wsdl4j.version>
@@ -46,12 +46,17 @@
          </dependency>
          <!-- Prod external -->
          <dependency>
-            <groupId>com.yammer.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
             <version>${dropwizard.version}</version>
          </dependency>
          <dependency>
-            <groupId>com.yammer.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-assets</artifactId>
+            <version>${dropwizard.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-client</artifactId>
             <version>${dropwizard.version}</version>
          </dependency>

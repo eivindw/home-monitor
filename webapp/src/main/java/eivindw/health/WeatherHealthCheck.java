@@ -1,19 +1,16 @@
 package eivindw.health;
 
-import com.yammer.metrics.core.HealthCheck;
+import com.codahale.metrics.health.HealthCheck;
 import no.met.metdata.MetDataService_wsdl.MetDataServiceLocator;
 import no.met.metdata.MetDataService_wsdl.MetDataServicePortType;
 
 public class WeatherHealthCheck extends HealthCheck {
 
-   public WeatherHealthCheck(String name) {
-      super(name);
-   }
-
    @Override
    protected Result check() throws Exception {
       try {
-         MetDataServicePortType service = (MetDataServicePortType) new MetDataServiceLocator().getPort(MetDataServicePortType.class);
+         final MetDataServicePortType service =
+            (MetDataServicePortType) new MetDataServiceLocator().getPort(MetDataServicePortType.class);
 
          service.getDateFormat();
 
