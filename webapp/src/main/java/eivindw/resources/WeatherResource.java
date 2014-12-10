@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-@Path("/weather")
+@Path("weather")
 @Produces(MediaType.APPLICATION_JSON)
 public class WeatherResource {
 

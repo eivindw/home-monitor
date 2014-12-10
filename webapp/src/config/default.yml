@@ -1,8 +1,7 @@
-http:
-   rootPath: /api/*
-   port: 8080
-   adminPort: 8080
-
+server:
+   type: simple
+   applicationContextPath: /
+   rootPath: /api
 clients:
    efergy:
       user: <not set>

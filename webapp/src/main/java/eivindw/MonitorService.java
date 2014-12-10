@@ -20,7 +20,7 @@ public class MonitorService extends Application<MonitorConfiguration> {
 
    @Override
    public void initialize(Bootstrap<MonitorConfiguration> bootstrap) {
-      bootstrap.addBundle(new AssetsBundle("/assets/", "/", "index.html"));
+      bootstrap.addBundle(new AssetsBundle("/assets/", "/", "index.html", "web"));
    }
 
    @Override
